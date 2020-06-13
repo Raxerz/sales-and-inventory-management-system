@@ -42,13 +42,13 @@ Password : admin
 
 Use the following url and credentials:
 
-   Url : https://inventory-mgmnt-system.herokuapp.com/ or localhost/inventory/ (If you are running it on local host)
+Url : https://inventory-mgmnt-system.herokuapp.com/ or localhost/inventory/ (If you are running it on local host)
    
-   Username : admin 
+Username : admin 
    
-   Password : admin
+Password : admin
    
-   Branch : <Select your branch>
+Branch : ```Select your branch```
 
 ![alt text](https://github.com/Raxerz/stock-and-inventory-management-system/blob/master/screenshots/screen-5.png "Login to branch details")
 
