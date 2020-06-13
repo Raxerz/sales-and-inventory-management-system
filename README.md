@@ -13,7 +13,7 @@ This is a stock and inventory manager - done as a hobby project and is written i
 Head over to phpmyadmin or mysql interface on your terminal and do the following:
 1. Create a database and
 2. Import sql from database/Inventory.sql to load the tables
-3. Go to dist/includes/dbcon.php and admin/dbcon.php and edit the following line in each of these files
+3. Go to dist/includes/dbcon.php and admin/dbcon.php and edit the following line in each of these files with your mysql and database credentials.
 ```php
 $con = mysqli_connect("<database-host-path:<port>","<username>","<password>","<database-name>");
 ```
