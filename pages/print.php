@@ -23,7 +23,7 @@ endif;
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-    
+
     <style type="text/css">
       h5,h6{
         text-align:center;
@@ -40,7 +40,7 @@ endif;
   <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
   <body class="hold-transition skin-blue layout-top-nav">
     <div class="wrapper">
-      
+
       <!-- Full Width Column -->
       <div class="content-wrapper">
         <div class="container">
@@ -51,7 +51,7 @@ endif;
               <div class="col-md-12">
 
               </div>
-                
+
                 <div class="box-body">
 
                   <!-- Date range -->
@@ -61,11 +61,11 @@ include('../dist/includes/dbcon.php');
 $id=$_SESSION['id'];
 $branch=$_SESSION['branch'];
     $query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die(mysqli_error());
-  
+
         $row=mysqli_fetch_array($query);
-        
-?>			
-                  <h5><b><?php echo $row['branch_name'];?></b> </h5>  
+
+?>
+                  <h5><b><?php echo $row['branch_name'];?></b> </h5>
                   <h6><?php echo $row['branch_address'];?></h6>
                   <h6>Contact #: <?php echo $row['branch_contact'];?></h6>
                   <h6 class="text-right">Date <?php echo date("M d, Y");?></h6>
@@ -78,13 +78,13 @@ $branch=$_SESSION['branch'];
     $sid=$_REQUEST['sid'];
     $cid=$_REQUEST['cid'];
     $query=mysqli_query($con,"select * from customer natural join sales natural join term natural join product where cust_id='$cid'")or die(mysqli_error($con));
-      
+
         $row=mysqli_fetch_array($query);
         $last=$row['cust_last'];
         $first=$row['cust_first'];
         $address=$row['cust_address'];
         $contact=$row['cust_contact'];
-        
+
 ?>                    <tr>
                         <th>Customer's Name: </th>
                         <th><?php echo $last.", ".$first;?></th>
@@ -105,7 +105,7 @@ $branch=$_SESSION['branch'];
 
 <p><b>2.)</b> To pay the monthly installment on time and in case of default, a 3% monthly penalty on present balance will be impose.</p>
 
-<p><b>3.)</b> Payments to the office or collectors should be receipted or documented by an AHIRA MARKETING official receipt. Payments with no receipts and unauthorized receipts will not be honored.</p>
+<p><b>3.)</b> Payments to the office or collectors should be receipted or documented by an official receipt. Payments with no receipts and unauthorized receipts will not be honored.</p>
 
 <p><b>4.)</b> Not to lend, hire, sell, or pledge the PRODUCT until the balance is fully paid.</p>
 
@@ -120,7 +120,7 @@ $branch=$_SESSION['branch'];
 <p>I acknowledge and fully understood and read the contents of this undertaking listed above from numbers 1 to 8. And below I affix my signature for conformity and acceptance of my obligation.</p>
                   <table class="table">
                     <thead>
-                        
+
                       <tr><br>
                         <th>____________________________________________</th>
                         <th>Regular Cash Price</th>
@@ -146,7 +146,7 @@ $branch=$_SESSION['branch'];
                         <th><?php echo $row['payable_for'];?> month/s</th>
                         <th><?php echo $row['due'];?></th>
                       </tr>
-                      
+
                       <tr>
                         <th></th>
                         <th>REBATE/Month</th>
@@ -154,20 +154,20 @@ $branch=$_SESSION['branch'];
                       </tr>
                       <tr>
                         <th>Schedule</th>
-                        
+
                       </tr>
 <?php
     $query2=mysqli_query($con,"select * from payment where sales_id='$sid' and payment='0' order by payment_date")or die(mysqli_error($con));
     while($row2=mysqli_fetch_array($query2)){
-       
-?>                     
+
+?>
                       <tr>
-                        
+
                         <td>Due Date</td>
                         <td style="text-align:right"><?php echo $row2['payment_for'];?></td>
                         <td>Amount Due</td>
                         <td style="text-align:right"><?php echo $row2['due'];?></td>
-                       
+
                       </tr>
 <?php }?>                      <tr>
                         <th>Remarks:<br>
@@ -177,24 +177,24 @@ $branch=$_SESSION['branch'];
                     <tbody>
 
                 </div><!-- /.box-body -->
-				</div>  
-				</form>	
+				</div>
+				</form>
                 </div><!-- /.box-body -->
                 <a class = "btn btn-success btn-print" href = "" onclick = "window.print()"><i class ="glyphicon glyphicon-print"></i> Print</a>
                 <a class = "btn btn-primary btn-print" href = "home.php"><i class ="glyphicon glyphicon-arrow-left"></i> Back to Homepage</a>
               </div><!-- /.box -->
             </div><!-- /.col (right) -->
-           
+
           </div><!-- /.row -->
-	  
-             
+
+
           </section><!-- /.content -->
         </div><!-- /.container -->
       </div><!-- /.content-wrapper -->
-     
+
     </div><!-- ./wrapper -->
-	
-	
+
+
 	<script type="text/javascript" src="autosum.js"></script>
     <!-- jQuery 2.1.4 -->
     <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
@@ -212,6 +212,6 @@ $branch=$_SESSION['branch'];
     <script src="../dist/js/demo.js"></script>
     <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
-   
+
   </body>
 </html>
