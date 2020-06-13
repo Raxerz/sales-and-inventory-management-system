@@ -48,7 +48,7 @@ Username : admin
    
 Password : admin
    
-Branch : ```Select your branch```
+Branch : ```<Select your branch>```
 
 ![alt text](https://github.com/Raxerz/stock-and-inventory-management-system/blob/master/screenshots/screen-5.png "Login to branch details")
 
